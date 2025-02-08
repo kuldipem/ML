@@ -1,0 +1,155 @@
+\documentclass{article}
+\usepackage{amsmath} % For advanced math commands
+\usepackage{amssymb} % For math symbols
+
+\begin{document}
+
+\title{Important Equations in Machine Learning}
+\maketitle
+
+\section{Supervised Learning}
+
+\subsection{1. Linear Regression}
+\begin{equation}
+y = \beta_0 + \beta_1 x + \epsilon
+\end{equation}
+\begin{itemize}
+    \item \(y\): Dependent variable (target)
+    \item \(x\): Independent variable (feature)
+    \item \(\beta_0\): Intercept
+    \item \(\beta_1\): Slope coefficient
+    \item \(\epsilon\): Error term
+\end{itemize}
+
+\subsection{2. Multiple Linear Regression}
+\begin{equation}
+y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_n x_n + \epsilon
+\end{equation}
+\begin{itemize}
+    \item \(y\): Dependent variable (target)
+    \item \(x_i\): Independent variables (features)
+    \item \(\beta_0\): Intercept
+    \item \(\beta_i\): Coefficients for each feature
+    \item \(\epsilon\): Error term
+\end{itemize}
+
+\subsection{3. Logistic Regression}
+\begin{equation}
+P(y=1|x) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x)}}
+\end{equation}
+\begin{itemize}
+    \item \(P(y=1|x)\): Probability of class 1 given feature \(x\)
+    \item \(\beta_0, \beta_1\): Model coefficients
+    \item \(e\): Euler’s number (\(\approx 2.718\))
+\end{itemize}
+
+\subsection{4. Mean Squared Error (MSE)}
+\begin{equation}
+MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+\end{equation}
+\begin{itemize}
+    \item \(n\): Number of observations
+    \item \(y_i\): Actual value
+    \item \(\hat{y}_i\): Predicted value
+\end{itemize}
+
+\subsection{5. Root Mean Squared Error (RMSE)}
+\begin{equation}
+RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2} = \sqrt{MSE}
+\end{equation}
+\begin{itemize}
+    \item \(n\): Number of observations
+    \item \(y_i\): Actual value
+    \item \(\hat{y}_i\): Predicted value
+\end{itemize}
+
+\subsection{6. Gradient Descent Update Rule}
+\begin{equation}
+\theta_j := \theta_j - \alpha \frac{\partial J}{\partial \theta_j}
+\end{equation}
+\begin{itemize}
+    \item \(\theta_j\): Model parameter
+    \item \(\alpha\): Learning rate
+    \item \(J\): Cost function
+\end{itemize}
+
+\section{Unsupervised Learning}
+
+\subsection{7. Entropy (for Decision Trees)}
+\begin{equation}
+H(X) = - \sum_{i=1}^{n} p_i \log_2 p_i
+\end{equation}
+\begin{itemize}
+    \item \(H(X)\): Entropy of dataset \(X\)
+    \item \(p_i\): Probability of class \(i\)
+\end{itemize}
+
+\subsection{8. Gini Impurity (for Decision Trees)}
+\begin{equation}
+Gini = 1 - \sum_{i=1}^{n} p_i^2
+\end{equation}
+\begin{itemize}
+    \item \(p_i\): Probability of class \(i\)
+\end{itemize}
+
+\subsection{9. K-Means Clustering Objective Function}
+\begin{equation}
+J = \sum_{i=1}^{k} \sum_{x \in C_i} \| x - \mu_i \|^2
+\end{equation}
+\begin{itemize}
+    \item \(J\): Objective function (Inertia)
+    \item \(k\): Number of clusters
+    \item \(C_i\): Cluster \(i\)
+    \item \(x\): Data point
+    \item \(\mu_i\): Centroid of cluster \(i\)
+\end{itemize}
+
+\section{Other Important Equations}
+
+\subsection{10. Bayes’ Theorem}
+\begin{equation}
+P(A|B) = \frac{P(B|A) P(A)}{P(B)}
+\end{equation}
+\begin{itemize}
+    \item \(P(A|B)\): Probability of A given B (Posterior)
+    \item \(P(B|A)\): Probability of B given A (Likelihood)
+    \item \(P(A)\): Prior probability of A
+    \item \(P(B)\): Prior probability of B (Evidence)
+\end{itemize}
+
+\subsection{11. Support Vector Machine (SVM) Decision Function}
+\begin{equation}
+f(x) = \text{sign}(w^T x + b)
+\end{equation}
+\begin{itemize}
+    \item \(f(x)\): Decision function
+    \item \(w\): Weight vector
+    \item \(x\): Feature vector
+    \item \(b\): Bias term
+\end{itemize}
+
+\subsection{12. Neural Network Weight Update (Backpropagation)}
+\begin{equation}
+w := w - \alpha \frac{\partial L}{\partial w}
+\end{equation}
+\begin{itemize}
+    \item \(w\): Weight parameter
+    \item \(\alpha\): Learning rate
+    \item \(L\): Loss function
+\end{itemize}
+
+\subsection{13. TF-IDF (Term Frequency-Inverse Document Frequency)}
+\begin{equation}
+TF-IDF = TF \times IDF
+\end{equation}
+\begin{equation}
+IDF = \log \left( \frac{N}{DF} \right)
+\end{equation}
+\begin{itemize}
+    \item \(TF\): Term frequency
+    \item \(IDF\): Inverse document frequency
+    \item \(N\): Total number of documents
+    \item \(DF\): Number of documents containing the term
+\end{itemize}
+
+\end{document}
